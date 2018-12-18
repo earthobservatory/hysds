@@ -90,7 +90,10 @@ WORKER_CONTIGUOUS_FAILURE_THRESHOLD = 10
 WORKER_CONTIGUOUS_FAILURE_TIME = 5.
 
 ROOT_WORK_DIR = "/data/work"
-WEBDAV_URL = None
+# Points to URL for WEBDAV work directory, None uses public_ip (for cloud services),
+# any string with "pvt_ip"  uses ipaddress (for on-premise intranet access)
+# default: WEBDAV_URL = None
+WEBDAV_URL = "pvt_ip"
 WEBDAV_PORT = 8085
 
 WORKER_MOUNT_BLACKLIST = [

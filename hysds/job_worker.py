@@ -748,6 +748,8 @@ def run_job(job, queue_when_finished=True):
     # add webdav url to job dir
     if webdav_url is None:
         webdav_url = "http://%s:%s" % (job['job_info']['public_ip'], webdav_port)
+    elif "pvt_ip" in webdav_url:
+        webdav_url = "http://%s:%s" % (job['job_info']['facts']['ipaddress'], webdav_port)
     job['job_info']['job_url'] = os.path.join(webdav_url, jobs_dir, "%04d" % yr,
                                               "%02d" % mo, "%02d" % dy, "%02d" % hr,
                                               "%02d" % mi, job_id)
