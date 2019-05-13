@@ -101,11 +101,11 @@ pynacl>=1.1.2             # via paramiko
 python-dateutil==2.6.1    # via botocore, prov
 pytz==2017.2              # via babel, celery, flower
 redis==2.10.5
-requests==2.18.1
+requests>=2.20.0
 rsa==3.4.2                # via google-auth, google-auth-httplib2, oauth2client
 s3transfer==0.1.10        # via boto3
 singledispatch==3.4.0.3   # via tornado
 six==1.10.0               # via bcrypt, cryptography, google-auth, google-auth-httplib2, google-cloud-core, google-cloud-videointelligence, google-resumable-media, grpcio, oauth2client, protobuf, prov, pynacl, python-dateutil, singledispatch
 supervisor==3.3.2
 tornado==4.5.1            # via flower
-urllib3==1.21.1           # via requests
+urllib3>=1.23             # via requests
