@@ -60,7 +60,7 @@ def check_failed_job(url, job_type, periodicity, error, slack_url=None, email=No
         #error += "time_queued: %s\n" % latest_job['job']['job_info']['time_queued']
         error += "time_start: %s\n" % latest_job['job']['job_info']['time_start']
         error += "time_end: %s\n" % latest_job['job']['job_info']['time_end']
-        error += "Error: %s\n" % latest_job['error']
+        #error += "Error: %s\n" % latest_job['error']
         error += "Tracebak: %s\n" % latest_job['traceback']
 
     subject = "\nJob Status checking for job type %s:\n\n" % job_type
